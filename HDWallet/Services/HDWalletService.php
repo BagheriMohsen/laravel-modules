@@ -19,8 +19,8 @@ class HDWalletService implements HDWalletServiceInterface
     public function __construct(public HierarchicalKeyFactory $hierarchicalKeyFactory)
     {
         $this->secp256k1 = new EC('secp256k1');
-        $this->sha3NullHash = config('HDWallet.sha3_null_hash');
-        $this->hdWalletPrivate = config('HDWallet.hd_wallet_private');
+        $this->sha3NullHash = config('hd_wallet.sha3_null_hash');
+        $this->hdWalletPrivate = config('hd_wallet.hd_wallet_private');
     }
 
     public function generateAddress(int $coinType, int|string $account=0, $change=0, $index='', string $addressType='public'): array
@@ -96,7 +96,7 @@ class HDWalletService implements HDWalletServiceInterface
             $count = 1;
             return str_replace('0x', '', $value, $count);
         }
-        
+
         return $value;
     }
 

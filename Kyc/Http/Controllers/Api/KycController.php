@@ -2,7 +2,7 @@
 
 namespace Modules\Kyc\Http\Controllers\Api;
 
-use App\Http\Controllers\BaseApiController;
+use App\Http\Controllers\Controller;
 use Modules\Kyc\Http\Requests\CardInfoRequest;
 use Modules\Kyc\Http\Requests\GetAddressFromPostalCodeRequest;
 use Modules\Kyc\Http\Requests\GetIbanFromCardRequest;
@@ -11,7 +11,7 @@ use Modules\Kyc\Http\Requests\MatchCellphoneAndNationalCodeRequest;
 use Modules\Kyc\Http\Requests\NameSimilarityRequest;
 use Modules\Kyc\Services\KycServiceInterface;
 
-class KycController extends BaseApiController
+class KycController extends Controller
 {
 
     public function __construct(public KycServiceInterface $kycService)
@@ -75,6 +75,6 @@ class KycController extends BaseApiController
         $user = auth()->user();
         $this->kycService->create($user->id, $requestAll, $info);
 
-        return $this->sendResponse($info);
+        return jsonResponse(data: $info);
     }
 }

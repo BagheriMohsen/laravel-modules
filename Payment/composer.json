@@ -18,6 +18,9 @@
     "autoload": {
         "psr-4": {
             "Modules\\Payment\\": ""
-        }
+        },
+        "files":[
+            "Modules\\helpers.php"
+        ]
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Order\Http\Controllers;
+namespace Modules\Product\Http\Controllers;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class OrderController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('order::index');
+        return view('product::index');
     }
 
     /**
@@ -23,7 +23,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        return view('order::create');
+        return view('product::create');
     }
 
     /**
@@ -43,7 +43,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        return view('order::show');
+        return view('product::show');
     }
 
     /**
@@ -53,7 +53,7 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        return view('order::edit');
+        return view('product::edit');
     }
 
     /**

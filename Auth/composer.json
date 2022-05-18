@@ -18,6 +18,9 @@
     "autoload": {
         "psr-4": {
             "Modules\\Auth\\": ""
-        }
+        },
+        "files": [
+            "Modules\\helpers.php"
+        ]
     }
 }

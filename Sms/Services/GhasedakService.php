@@ -3,10 +3,12 @@
 namespace Modules\Sms\Services;
 
 use Ghasedak\GhasedakApi;
-use Ghasedak\Laravel\GhasedakFacade;
 
 class GhasedakService extends BaseService implements SmsServiceInterface
 {
+    const VERIFY_MESSAGE_VOICE = 2;
+    const VERIFY_MESSAGE_TEXT = 1;
+
     public function __construct()
     {
     }
@@ -26,7 +28,7 @@ class GhasedakService extends BaseService implements SmsServiceInterface
     {
         $this->provider()->Verify(
             $phoneNumber,
-            GhasedakFacade::VERIFY_MESSAGE_VOICE,
+            self::VERIFY_MESSAGE_VOICE,
             $template,
         );
         $this->createLog($phoneNumber, $message, __METHOD__);
@@ -36,7 +38,7 @@ class GhasedakService extends BaseService implements SmsServiceInterface
     {
         $this->provider()->Verify(
             $phoneNumber,
-            GhasedakFacade::VERIFY_MESSAGE_TEXT,
+            self::VERIFY_MESSAGE_TEXT,
             $template,
             $data
         );

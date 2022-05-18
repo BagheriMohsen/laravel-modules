@@ -1,11 +1,11 @@
 {
-    "name": "Order",
-    "alias": "order",
+    "name": "Product",
+    "alias": "product",
     "description": "",
     "keywords": [],
     "priority": 0,
     "providers": [
-        "Modules\\Order\\Providers\\OrderServiceProvider"
+        "Modules\\Product\\Providers\\ProductServiceProvider"
     ],
     "aliases": {},
     "files": [],

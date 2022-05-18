@@ -2,14 +2,16 @@
 
 namespace Modules\Payment\Http\Controllers\Api;
 
-use App\Http\Controllers\BaseApiController;
+
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 use Modules\Payment\Http\Requests\Api\PaymentRequest;
 use Modules\Payment\Repositories\PaymentRepositoryInterface;
 use Modules\Payment\Services\PaymentGateway\PaymentGatewayInterface;
 
 
-class PaymentApiController extends BaseApiController
+class PaymentApiController extends Controller
 {
     public function __construct(public PaymentRepositoryInterface $paymentRepository,
                                 public PaymentGatewayInterface $paymentGateway)
@@ -38,12 +40,12 @@ class PaymentApiController extends BaseApiController
         $response = $this->paymentGateway->request($payment);
 
         if($response['status']) {
-            return $this->sendResponse([
+            return jsonResponse(true, __("Transferring to the payment gateway"), [
                 'url' => $response['url']
-            ], __("Transferring to the payment gateway"));
+            ]);
         }
 
-        return $this->sendError(__('Something is wrong.Please try later'));
+        return jsonResponse(message: __('Something is wrong.Please try later'), code: Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 
     public function callback(Request $request): \Illuminate\Http\RedirectResponse

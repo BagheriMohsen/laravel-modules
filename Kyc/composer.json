@@ -18,6 +18,9 @@
     "autoload": {
         "psr-4": {
             "Modules\\Kyc\\": ""
-        }
+        },
+        "files": [
+            "Modules\\helpers.php"
+        ]
     }
 }

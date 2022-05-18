@@ -1,0 +1,28 @@
+{
+    "name": "nwidart/hdwallet",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "require": {
+        "bitwasp/bitcoin": "*",
+        "simplito/elliptic-php": "^1.0",
+        "kornrunner/keccak": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\HDWallet\\": ""
+        }
+    }
+}

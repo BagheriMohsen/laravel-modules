@@ -1,0 +1,13 @@
+{
+    "name": "HDWallet",
+    "alias": "hdwallet",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\HDWallet\\Providers\\HDWalletServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

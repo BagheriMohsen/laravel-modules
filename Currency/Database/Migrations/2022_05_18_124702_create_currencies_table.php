@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('code')->unique();
-            $table->string('code')->default(Currency::TYPE_FIAT);
+            $table->string('type')->default(Currency::TYPE_FIAT);
             $table->string('logo')->nullable();
             $table->text('description')->nullable();
             $table->boolean('is_active')->default(true);

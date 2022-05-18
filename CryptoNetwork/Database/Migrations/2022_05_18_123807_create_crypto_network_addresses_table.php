@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('currency_id');
-            $table->string('public_address');
-            $table->string('private_address');
+            $table->string('address');
+            $table->string('public_key');
+            $table->string('private_key');
             $table->timestamps();
         });
     }

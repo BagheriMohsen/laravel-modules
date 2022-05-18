@@ -18,6 +18,9 @@
     "autoload": {
         "psr-4": {
             "Modules\\CryptoNetwork\\": ""
-        }
+        },
+        "files": [
+            "Modules\\helpers.php"
+        ]
     }
 }

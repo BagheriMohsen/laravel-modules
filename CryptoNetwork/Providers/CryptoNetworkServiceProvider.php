@@ -4,6 +4,8 @@ namespace Modules\CryptoNetwork\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\CryptoNetwork\Repositories\CryptoNetworkAddressRepositoryInterface;
+use Modules\CryptoNetwork\Repositories\Eloquent\CryptoNetworkAddressRepository;
 
 class CryptoNetworkServiceProvider extends ServiceProvider
 {
@@ -38,6 +40,12 @@ class CryptoNetworkServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->binding();
+    }
+
+    public function binding()
+    {
+        $this->app->bind(CryptoNetworkAddressRepositoryInterface::class, CryptoNetworkAddressRepository::class);
     }
 
     /**

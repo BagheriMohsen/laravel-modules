@@ -14,8 +14,7 @@ class CryptoNetworkAddress extends Model
         'currency_id',
         'network',
         'public_address',
-        'private_address',
-        'accuracy'
+        'private_address'
     ];
 
 }

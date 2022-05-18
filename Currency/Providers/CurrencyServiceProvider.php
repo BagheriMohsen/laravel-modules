@@ -4,6 +4,8 @@ namespace Modules\Currency\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Currency\Repositories\CurrencyRepositoryInterface;
+use Modules\Currency\Repositories\Eloquent\CurrencyRepository;
 
 class CurrencyServiceProvider extends ServiceProvider
 {
@@ -38,6 +40,12 @@ class CurrencyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->binding();
+    }
+
+    public function binding()
+    {
+        $this->app->bind(CurrencyRepositoryInterface::class, CurrencyRepository::class);
     }
 
     /**

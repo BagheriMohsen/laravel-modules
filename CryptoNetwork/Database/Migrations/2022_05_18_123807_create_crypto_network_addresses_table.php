@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCryptoNetworkAddressesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -19,7 +19,6 @@ class CreateCryptoNetworkAddressesTable extends Migration
             $table->foreignId('currency_id');
             $table->string('public_address');
             $table->string('private_address');
-            $table->integer('accuracy')->default(8);
             $table->timestamps();
         });
     }
@@ -33,4 +32,4 @@ class CreateCryptoNetworkAddressesTable extends Migration
     {
         Schema::dropIfExists('crypto_network_addresses');
     }
-}
+};

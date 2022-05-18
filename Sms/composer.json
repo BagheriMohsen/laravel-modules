@@ -1,0 +1,28 @@
+{
+    "name": "nwidart/sms",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "require": {
+        "ghasedak/laravel": "*",
+        "kavenegar/php": "*",
+        "melipayamak/php": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Sms\\": ""
+        }
+    }
+}

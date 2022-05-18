@@ -1,0 +1,13 @@
+{
+    "name": "UserLedger",
+    "alias": "userledger",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\UserLedger\\Providers\\UserLedgerServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

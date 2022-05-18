@@ -1,0 +1,13 @@
+{
+    "name": "BankCard",
+    "alias": "bankcard",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BankCard\\Providers\\BankCardServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

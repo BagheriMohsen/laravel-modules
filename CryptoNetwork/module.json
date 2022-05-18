@@ -1,0 +1,13 @@
+{
+    "name": "CryptoNetwork",
+    "alias": "cryptonetwork",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CryptoNetwork\\Providers\\CryptoNetworkServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
